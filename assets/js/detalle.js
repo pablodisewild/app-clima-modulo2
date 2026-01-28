@@ -71,29 +71,32 @@ const pronosticosCiudades = {
     ]
 };
 
-// Capturar parámetros de la URL
+// 1. Obtener el nombre de la ciudad desde la URL
 const params = new URLSearchParams(window.location.search);
 const ciudadSeleccionada = params.get("ciudad");
 
-// Referencias al DOM
+// 2. Referencias a los elementos del HTML
 const tituloCiudad = document.getElementById("nombre-ciudad");
 const contenedorSemanal = document.getElementById("pronostico-semanal");
+const textoHumedad = document.getElementById("humedad-detalle");
+const textoViento = document.getElementById("viento-detalle");
 
+// 3. Lógica para cambiar el contenido
 if (ciudadSeleccionada && pronosticosCiudades[ciudadSeleccionada]) {
-    // 1. Actualizar título
+    // Aquí es donde "Cargando..." desaparece y se pone el nombre
     tituloCiudad.innerText = `Clima en ${ciudadSeleccionada}`;
     
-    // 2. Datos extra (Simulados para completar tu diseño)
-    document.getElementById("humedad-detalle").innerText = `💧 Humedad: ${Math.floor(Math.random() * 40 + 30)}%`;
-    document.getElementById("viento-detalle").innerText = `💨 Viento: ${Math.floor(Math.random() * 20 + 5)} km/h`;
+    // Rellenamos humedad y viento con datos ficticios
+    textoHumedad.innerText = `💧 Humedad: 45%`;
+    textoViento.innerText = `💨 Viento: 12 km/h`;
 
-    // 3. Renderizar pronóstico semanal
+    // Limpiamos el contenedor y creamos las tarjetas
     contenedorSemanal.innerHTML = "";
     pronosticosCiudades[ciudadSeleccionada].forEach(item => {
         contenedorSemanal.innerHTML += `
             <div class="col">
-                <div class="card h-100 shadow-sm border-0 bg-light">
-                    <div class="card-body text-center">
+                <div class="card h-100 shadow-sm border-0 bg-light text-center">
+                    <div class="card-body">
                         <p class="text-muted fw-bold mb-1">${item.dia}</p>
                         <div class="fs-2 mb-2">${item.estado}</div>
                         <p class="h4 mb-0 text-primary">${item.temp}</p>
