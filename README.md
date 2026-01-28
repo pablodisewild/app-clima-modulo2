@@ -1,9 +1,8 @@
-# App Clima - Mulo 2  
-  
-### Estudiante: Pablo Ignacio Muz Garc  
-  
-## Descripci  
-MVP de aplicaci meteorolica desarrollada para el Mulo 2 de Front-End. Incluye un listado din爉ico de 10 localidades, navegaci a vista de detalle con prontico semanal y dise responsivo utilizando Bootstrap 5 local. Enfocado en HTML5 sem爊tico y JS Vanilla.  
-  
-## Demo en vivo  
-https://pablodisewild.github.io/app-clima-modulo2/ 
+# App Clima - M贸dulo 2
+### Estudiante: Pablo Ignacio Mu帽oz Garc铆a
+
+## Descripci贸n
+MVP de aplicaci贸n meteorol贸gica desarrollada para el M贸dulo 2 de Front-End. Incluye un listado din谩mico de 10 localidades, navegaci贸n a vista de detalle con pron贸stico semanal y dise帽o responsivo utilizando Bootstrap 5 local. Enfocado en HTML5 sem谩ntico y JS Vanilla.
+
+## Demo en vivo
+https://pablodisewild.github.io/app-clima-modulo2/
